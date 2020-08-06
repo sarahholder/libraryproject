@@ -1,13 +1,9 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Librarian</title>
-  </head>
-  <body>
-    <h1> Librarian Information:</h1>
-    <h2>{{ librarian.first_name }} {{ librarian.last_name }}</h2>
+{% extends 'shared/base.html' %}
+
+  {% block content  %}
+
+    <h2> Librarian Information:</h2>
+    <h3>{{ librarian.first_name }} {{ librarian.last_name }}</h3>
     <p>Email: {{ librarian.email }}</p>
     <p>User Name: {{ librarian.username }}</p>
     <p>Superuser: {% if librarian.is_superuser %} Yep dey is! 
@@ -15,5 +11,5 @@
     {% endif %}
     <p>Date Joined: {{ librarian.date_joined }}</p>
     <p>Last Login: {{ librarian.last_login }}</p>
-  </body>
-</html>
+
+{% endblock %}
