@@ -5,8 +5,6 @@ from django.urls import reverse
 from libraryapp.models import Book
 from ..connection import Connection
 
-
-
 @login_required
 def book_list(request):
     if request.method == 'GET':

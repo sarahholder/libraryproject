@@ -11,3 +11,5 @@ class Book(models.Model):
     location = models.ForeignKey(Library, on_delete=models.CASCADE)
     librarian = models.ForeignKey(Librarian, on_delete=models.CASCADE, default=None, null=True)
 
+    def __str__(self):
+        return self.title

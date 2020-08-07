@@ -18,5 +18,19 @@ INSERT INTO libraryapp_book
 VALUES
 ('Outlander', '8582475822', 2013, 1, 'Diana Gabaldon', 2);
 
-SELECT * FROM auth_user
+SELECT * FROM auth_user;
+
+SELECT
+	li.id,
+	li.title,
+	li.address,
+	b.id book_id,
+	b.title book_title,
+	b.author,
+	b.year_published,
+	b.isbn,
+	b.location_id
+FROM libraryapp_library li
+JOIN libraryapp_book b ON li.id = b.location_id
+
 

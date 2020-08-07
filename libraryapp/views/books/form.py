@@ -7,7 +7,7 @@ from libraryapp.models import model_factory
 from ..connection import Connection
 from ..helpers.books import get_book
 
-
+@login_required
 def get_libraries():
     with sqlite3.connect(Connection.db_path) as conn:
         conn.row_factory = model_factory(Library)
