@@ -1,6 +1,5 @@
 import sqlite3
 from ..connection import Connection
-from libraryapp.models import model_factory
 from libraryapp.models import Book, Library, Librarian
 
 def create_book(cursor, row):

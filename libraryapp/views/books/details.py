@@ -2,7 +2,7 @@ import sqlite3
 from django.urls import reverse
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from ..helpers.books import get_book
+from ..helpers.get_books import get_book
 from ..connection import Connection
 
 @login_required

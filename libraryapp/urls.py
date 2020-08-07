@@ -7,6 +7,7 @@ app_name = "libraryapp"
 
 urlpatterns = [
     path('home/', home, name='home'),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('books/', book_list, name='books'),
     path('logout/', logout_user, name='logout'),
     path('libraries/', library_list, name='libraries'),

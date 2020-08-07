@@ -9,12 +9,10 @@
     {% for library in all_libraries %}
         <li>
             <a href="{% url 'libraryapp:library' library.id %}">
-                {{ library.title }}
-            
-            ({{ library.address }})
+            {{ library.title }}</a>({{ library.address }})
             <ul>
             {% for book in library.books %}
-                <li>{{ book.title }}</li>
+                <li><a href="{% url 'libraryapp:book' book.id %}">{{ book.title }}</a></li>
             {% endfor %}
             </ul>
         </li>

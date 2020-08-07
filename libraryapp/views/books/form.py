@@ -5,7 +5,7 @@ from libraryapp.models import Book
 from libraryapp.models import Library
 from libraryapp.models import model_factory
 from ..connection import Connection
-from ..helpers.books import get_book
+from ..helpers.get_books import get_book
 
 @login_required
 def get_libraries():
