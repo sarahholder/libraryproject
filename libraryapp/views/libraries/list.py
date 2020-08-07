@@ -1,13 +1,11 @@
 import sqlite3
-from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from libraryapp.models import Library
 from django.urls import reverse
 from ..connection import Connection
 from django.urls import reverse
+from ...models.modelfactory import model_factory
 
-
-@login_required
 def library_list(request):
     if request.method == 'GET':
         with sqlite3.connect(Connection.db_path) as conn:
@@ -58,3 +56,4 @@ def library_list(request):
         return redirect(reverse('libraryapp:libraries'))
 
     return render(request, template, context)
+
